@@ -1,0 +1,7 @@
+Django
+djangorestframework
+markdown
+django-filter
+requests
+apscheduler==2.1.2
+geopy

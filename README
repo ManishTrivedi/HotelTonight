@@ -1,0 +1,18 @@
+1. Clone the git repo
+2. Install pip and python3 if not already installed
+3. Create a virtualenv with python 3 using command 'virtualenv -p python3 <foldername>'
+4. cd into the folder and activate the virtualenv '. bin/activate'
+5. cd into HotelTonight folder and run:
+   a. pip install -r requirements
+   b. python manage.py migrate
+   c. python manage.py loaddata dump.json (To load data in db)
+   d. python manage.py runserver
+6. Go to 'http://localhost:8000/cases/'
+
+TOOLS USED:
+1. Python
+2. Django
+3. Django rest framework
+4. Sqlite db, which is default db for django
+5. Python apscheduler package to schedule nightly cronjob
+6. Python geopy package to calcuate 5 mile radius 
