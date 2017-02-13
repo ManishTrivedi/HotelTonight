@@ -2,7 +2,7 @@ from apscheduler.scheduler import Scheduler
 import requests
 from casedata.serializers import CaseSerializer
 
-
+#Function to get cases and save it in db
 def get_case_data():
 	try:
 		r=requests.get('http://data.sfgov.org/resource/vw6y-z8j6.json')
@@ -16,4 +16,4 @@ def schedule():
 	# Start the scheduler
 	sched = Scheduler()
 	sched.start()
-	sched.add_cron_job(get_case_data, minute=38, hour=23)
+	sched.add_cron_job(get_case_data, minute=33, hour=15)
