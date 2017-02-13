@@ -2,16 +2,6 @@ from enum import Enum
 from datetime import datetime
 from geopy.distance import vincenty
 
-# class Status(Enum):
-# 	OPEN = 1
-# 	CLOSED = 2
-
-# def format_status(status):
-# 	if (status.upper() == Status.OPEN.name):
-# 		return 'Open'
-# 	elif (status.upper() == Status.CLOSED.name):	
-# 		return 'Closed'
-
 def format_datetime(since):
 	datetime_from=datetime.fromtimestamp(float(since)).strftime('%Y-%m-%d %H:%M:%S.%f')
 	datetime_to=datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S.%f')
@@ -25,7 +15,6 @@ def get_filters_from_query_string(params):
 	since = params.get('since', None)
 
 	if status:
-		#filters['status'] = format_status(status)
 		filters['status'] = status
 	if category:
 		filters['category'] = category
