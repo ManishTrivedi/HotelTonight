@@ -16,3 +16,10 @@ TOOLS USED:
 4. Sqlite db, which is default db for django
 5. Python apscheduler package to schedule nightly cronjob
 6. Python geopy package to calcuate 5 mile radius 
+
+STRUCTURE:
+casedata is the app that has all the logic 
+1. Tables are defined in models.py
+2. API endpoint is in view.py
+3. utils.py has helper methods
+4. scheduler.py has the cron job to get new cases since last run and scheduling logic
